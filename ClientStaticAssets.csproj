@@ -11,7 +11,8 @@
     <Authors>eric-gutt</Authors>
     <Company>personal</Company>
      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-     <RepositoryUrl>https://github.com/eric-gutt/ClientStaticAssets</RepositoryUrl>
+     <RepositoryUrl>https://github.com/EDG-SD/ClientStaticAssets</RepositoryUrl>
+     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
     <Content Include="_._"
       Pack="true"
       PackagePath="lib\net8.0\_._" />
+       <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
