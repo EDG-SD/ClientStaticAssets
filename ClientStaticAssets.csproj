@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Description>DotNet 8.0 Package demonstrating how to integrate third party tools with Razor Class Libraries.</Description>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <PackageId>ClientStaticAssets</PackageId>
+    <Version>8.0.0</Version>
+    <Authors>eric-gutt</Authors>
+    <Company>personal</Company>
+     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+     <RepositoryUrl>https://github.com/eric-gutt/ClientStaticAssets</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="build\**"
+      Pack="true"
+      PackagePath="%(Identity)" />
+    <Content Include="_._"
+      Pack="true"
+      PackagePath="lib\net8.0\_._" />
+  </ItemGroup>
+
+</Project>
