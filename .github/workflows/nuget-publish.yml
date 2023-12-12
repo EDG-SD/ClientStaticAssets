@@ -32,6 +32,14 @@ jobs:
      steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.1
+
+      - name: Get Build Version
+        run: |
+          Import-Module .\build\GetBuildVersion.psm1
+          Write-Host $Env:GITHUB_REF
+          $version = $VERSION
+          echo "BUILD_VERSION=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+        shell: pwsh
            
       # Runs a single command using the runners shell
       - name: Setup Nuget
